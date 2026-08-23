@@ -3,6 +3,7 @@ package strategy;
 import java.util.ArrayList;
 
 public class Team {
+    //makes a team with a name and an arraylist of players
     private String teamName;
     private ArrayList<Player> players;
 
@@ -13,7 +14,7 @@ public class Team {
 
     public void addTeamMember(String firstName, String lastName, PlayerType playerType) {
         Player player;
-        
+        //makes a new player based on the player type and adds them to the team
         switch (playerType) {
             case GOALIE:
                 player = new Goalie(firstName, lastName);
@@ -32,7 +33,7 @@ public class Team {
     }
 
     public void executePlay(PlayerType playerType) {
-        // Find the first player of the specified type and execute their play
+        // Finds the first player of the specified type and executes their play
         for (Player player : players) {
             if (player.getPlayerType() == playerType) {
                 System.out.println(player.play());
