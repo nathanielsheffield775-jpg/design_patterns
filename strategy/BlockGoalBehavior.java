@@ -1,7 +1,9 @@
 package strategy;
 
 public class BlockGoalBehavior implements Behavior {
+
+    @Override
     public String play() {
-        return "Goalie blocks the shot!";
+        return "Blocks the puck from going into the goal!";
     }
 }

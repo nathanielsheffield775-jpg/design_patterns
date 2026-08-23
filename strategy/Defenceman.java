@@ -11,7 +11,7 @@ public class Defenceman extends Player{
         if(rand.nextBoolean()) {
             behavior = new PassBehavior();
         } else {
-            behavior = new BlockBehavior();
+            behavior = new BlockGoalBehavior();
         }  
     }
     

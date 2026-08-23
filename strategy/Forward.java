@@ -9,9 +9,9 @@ public class Forward extends Player{
     @Override
     public void setBehavior() {
         if(rand.nextBoolean()) {
-            behavior = new PassBehavior();
-        } else {
             behavior = new ShootBehavior();
+        } else {
+            behavior = new PassBehavior();
         }
     }
 
