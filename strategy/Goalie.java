@@ -8,7 +8,7 @@ public class Goalie extends Player{
 
     @Override
     public void setBehavior() {
-        if(rand.nextBoolean()==true) {
+        if(rand.nextInt(2)==0) {
             behavior = new BlockGoalBehavior();
         } else {
             behavior = new PassBehavior();

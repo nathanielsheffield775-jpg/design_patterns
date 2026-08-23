@@ -8,7 +8,7 @@ public class Defenceman extends Player{
 
     @Override
     public void setBehavior() {
-        if(rand.nextBoolean()==true) {
+        if(rand.nextInt(2)==0) {
             behavior = new PassBehavior();
         } else {
             behavior = new BlockGoalBehavior();

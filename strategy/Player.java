@@ -20,6 +20,7 @@ public abstract class Player {
     public abstract void setBehavior();
 
     public String play(){
+        setBehavior();
         return firstName + " " + lastName + " (" + playerType + ") " + behavior.play();
     }
 
