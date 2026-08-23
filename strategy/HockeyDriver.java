@@ -6,11 +6,17 @@ public class HockeyDriver {
 	private Scanner scanner;
 	private Team mapleLeafs;
 
+	/**
+	 * Constructs a new hockey driver instance.
+	 */
 	public HockeyDriver() {
 		clear();
 		scanner = new Scanner(System.in);
 	}
 
+	/**
+	 * Plays.
+	 */
 	public void play() {
 		mapleLeafs = initializeTeam();
 		displayTeam();
@@ -28,6 +34,11 @@ public class HockeyDriver {
 		System.out.println("Goodbye");
 	}
 
+	/**
+	 * Initializes the team.
+	 *
+	 * @return the resulting team
+	 */
 	private Team initializeTeam() {
 		Team mapleLeafs = new Team("Maple Leafs");
 		mapleLeafs.addTeamMember("Matt", "Murray", PlayerType.GOALIE);
@@ -36,6 +47,9 @@ public class HockeyDriver {
 		return mapleLeafs;
 	}
 
+	/**
+	 * Display teams.
+	 */
 	private void displayTeam() {
 		System.out.println("\n####### " + mapleLeafs.getName() + "####### ");
 
@@ -44,6 +58,12 @@ public class HockeyDriver {
 		}
 	}
 
+	/**
+	 * Returns the player type.
+	 *
+	 * @param num num
+	 * @return the resulting player type
+	 */
 	private PlayerType getPlayerType(int num) {
 		if(num == 0) {
 			return PlayerType.GOALIE;
@@ -54,6 +74,11 @@ public class HockeyDriver {
 		}
 	}
 
+	/**
+	 * Returns the command.
+	 *
+	 * @return the resulting numeric value
+	 */
 	private int getCommand() {
 		while (true) {
 			System.out.println("\nExecute Play");
