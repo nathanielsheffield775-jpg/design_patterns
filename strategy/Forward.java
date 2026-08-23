@@ -8,7 +8,7 @@ public class Forward extends Player{
 
     @Override
     public void setBehavior() {
-        if(rand.nextBoolean()) {
+        if(rand.nextBoolean()==true) {
             behavior = new ShootBehavior();
         } else {
             behavior = new PassBehavior();
