@@ -1,4 +1,4 @@
-
+package observer;
 
 public class Stock {
 

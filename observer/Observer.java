@@ -1,29 +1,29 @@
 package observer;
 
-public class Observer {
-    
-    private String name;
-    private Sector sector;
-    private String color;
+public abstract class Observer {
 
-    public Observer(String name, Sector sector, String color) {
-        this.name = name;
-        this.sector = sector;
-        this.color = color;
-    }
+	private String name;
+	private Sector sector;
+	private String color;
 
-    public abstract void update(Stock stock, Direction direction);
+	public Observer(Subject publisher, String name, Sector sector, String color) {
+		this.name = name;
+		this.sector = sector;
+		this.color = color;
+		publisher.registerObserver(this);
+	}
 
-    public String getName() {
-        return name;
-    }
+	public abstract void update(Stock stock, Direction direction);
 
-    public Sector getSector() {
-        return sector;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public String getColor() {
-        return color;
-    }
+	public Sector getSector() {
+		return sector;
+	}
 
+	public String getColor() {
+		return color;
+	}
 }
