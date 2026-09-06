@@ -23,7 +23,7 @@ public class VideoGameDriver {
 		while (true) {
 			clear();
 			System.out.println("Here's our warrior: ");
-			System.out.println(warrior);
+			System.out.println(FileReader.getLines("warrior.txt"));
 
 			displayMenu();
 			int userOption = getUserChoice();
