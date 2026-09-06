@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 public class FileReader {
     public static ArrayList<String> getLines(String fileName) {
+        System.out.println("Looking in: " + new File(".").getAbsolutePath());
         ArrayList<String> lines = new ArrayList<String>();
 
         try {
