@@ -25,8 +25,7 @@ public class VideoGameDriver {
 			clear();
 			System.out.println("Here's our warrior: ");
 			System.out.println(warrior);
-			System.out.println("Working dir: " + new File(".").getAbsolutePath());
-
+			
 			displayMenu();
 			int userOption = getUserChoice();
 
