@@ -1,5 +1,6 @@
 package decorator;
 
+import java.io.File;
 import java.text.NumberFormat;
 import java.util.Locale;
 import java.util.Scanner;
@@ -23,7 +24,8 @@ public class VideoGameDriver {
 		while (true) {
 			clear();
 			System.out.println("Here's our warrior: ");
-			System.out.println(FileReader.getLines("warrior.txt"));
+			System.out.println(warrior);
+			System.out.println("Working dir: " + new File(".").getAbsolutePath());
 
 			displayMenu();
 			int userOption = getUserChoice();
