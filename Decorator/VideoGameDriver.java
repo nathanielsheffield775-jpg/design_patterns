@@ -1,6 +1,5 @@
 package decorator;
 
-import java.io.File;
 import java.text.NumberFormat;
 import java.util.Locale;
 import java.util.Scanner;
@@ -25,7 +24,7 @@ public class VideoGameDriver {
 			clear();
 			System.out.println("Here's our warrior: ");
 			System.out.println(warrior);
-			
+
 			displayMenu();
 			int userOption = getUserChoice();
 
