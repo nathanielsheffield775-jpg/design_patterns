@@ -71,6 +71,7 @@ public class WordGameDriver {
     }
 
     public static void main(String[] args) {
+        System.out.println(new java.io.File(".").getAbsolutePath());
         WordGameDriver driver = new WordGameDriver();
         driver.run();
     }
