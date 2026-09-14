@@ -9,11 +9,17 @@ public class WordGameDriver {
     private VocabularyList vocabularyList;
     private static final String[] mainOptions = { "Show Round of Questions", "Increase Grade", "Decrease Grade", "Quit" };
 
+    /**
+     * Constructs a new word game driver instance.
+     */
     public WordGameDriver() {
         reader = new Scanner(System.in);
         vocabularyList = new VocabularyList();
     }
 
+    /**
+     * Runs the word game driver.
+     */
     public void run() {
         clear();
         System.out.println("Welcome to our Vocabulary Game");
@@ -39,6 +45,9 @@ public class WordGameDriver {
         }
     }
 
+    /**
+     * Show vocab rounds.
+     */
     private void showVocabRound() {
         for (int i = 0; i < NUM_WORDS; i++) {
             String definition = vocabularyList.getNextDefinition();
@@ -50,6 +59,11 @@ public class WordGameDriver {
         }
     }
 
+    /**
+     * Returns the user option.
+     *
+     * @return the resulting numeric value
+     */
     private int getUserOption() {
         for (int i = 0; i < mainOptions.length; i++) {
             System.out.println((i + 1) + ". " + mainOptions[i]);
@@ -57,11 +71,19 @@ public class WordGameDriver {
         return Integer.parseInt(reader.nextLine());
     }
 
+    /**
+     * Clears the word game driver.
+     */
     public void clear() {
         System.out.print("\033[H\033[2J");
         System.out.flush();
     }
 
+    /**
+     * Timeouts.
+     *
+     * @param time time
+     */
     private void timeout(int time) {
         try {
             TimeUnit.MILLISECONDS.sleep(time);
@@ -70,6 +92,11 @@ public class WordGameDriver {
         }
     }
 
+    /**
+     * Mains.
+     *
+     * @param args arguments
+     */
     public static void main(String[] args) {
         System.out.println(new java.io.File(".").getAbsolutePath());
         WordGameDriver driver = new WordGameDriver();

@@ -6,6 +6,12 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class FileReader {
+    /**
+     * Returns the words.
+     *
+     * @param fileName name
+     * @return mapping of string to string
+     */
     public static HashMap<String, String> getWords(String fileName) {
         HashMap<String, String> words = new HashMap<String, String>();
 
