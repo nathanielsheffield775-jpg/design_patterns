@@ -13,16 +13,22 @@ public class VideoGameDriver {
 	 * Original ascii drawing was found here:
 	 * https://www.asciiart.eu/people/occupations/knights
 	 */
+	/**
+	 * Constructs a new video game driver instance.
+	 */
 	public VideoGameDriver() {
 		scanner = new Scanner(System.in);
 	}
 
+	/**
+	 * Plays.
+	 */
 	public void play() {
 		Player warrior = new Warrior("Sir. Richard");
 
 		while (true) {
 			clear();
-			System.out.println("Here's our warrior: ");
+			System.out.println("Here's our warrior: " + "\n###### " + warrior.getName() + " ######");
 			System.out.println(warrior);
 
 			displayMenu();
@@ -42,6 +48,9 @@ public class VideoGameDriver {
 		System.out.println("Goodbye");
 	}
 
+	/**
+	 * Display menus.
+	 */
 	private void displayMenu() {
 		System.out.println("What would you like to give our warrior? ");
 		for (int i = 0; i < options.length; i++) {
@@ -49,6 +58,11 @@ public class VideoGameDriver {
 		}
 	}
 
+	/**
+	 * Returns the user choice.
+	 *
+	 * @return the resulting numeric value
+	 */
 	private int getUserChoice() {
 		while (true) {
 			System.out.print("Enter Number: ");
@@ -67,11 +81,19 @@ public class VideoGameDriver {
 		}
 	}
 
+	/**
+	 * Clears the video game driver.
+	 */
 	private void clear() {
 		System.out.print("\033[H\033[2J");
 		System.out.flush();
 	}
 
+	/**
+	 * Mains.
+	 *
+	 * @param args arguments
+	 */
 	public static void main(String[] args) {
 		VideoGameDriver driver = new VideoGameDriver();
 		driver.play();

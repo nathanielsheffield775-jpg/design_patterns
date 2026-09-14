@@ -6,6 +6,12 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FileReader {
+    /**
+     * Returns the lines.
+     *
+     * @param fileName name
+     * @return list containing strings
+     */
     public static ArrayList<String> getLines(String fileName) {
         ArrayList<String> lines = new ArrayList<String>();
 
