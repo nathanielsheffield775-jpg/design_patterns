@@ -1,4 +1,4 @@
-package state.src.state;
+package state;
 
 public class VocabularyList {
     private State state;

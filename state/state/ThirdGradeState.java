@@ -1,4 +1,4 @@
-package state.src.state;
+package state;
 
 public class ThirdGradeState extends State {
 

@@ -1,4 +1,4 @@
-package state.src.state;
+package state;
 
 import java.util.HashMap;
 import java.util.Random;
@@ -19,7 +19,6 @@ public class State {
         int index = rand.nextInt(definitions.length);
         return definitions[index];
     }
-
 
     public String getMatchingWord(String definition) {
         return words.get(definition);

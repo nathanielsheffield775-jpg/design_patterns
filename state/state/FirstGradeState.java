@@ -1,4 +1,4 @@
-package state.src.state;
+package state;
 
 public class FirstGradeState extends State {
 
@@ -6,11 +6,10 @@ public class FirstGradeState extends State {
         super(vocabularyList);
         this.words = FileReader.getWords("first.txt");
     }
-
+    
     @Override
     public void increaseGrade() {
         vocabularyList.setState(vocabularyList.getSecondGradeState());
         System.out.println("You are now in second grade.");
     }
-    
 }
