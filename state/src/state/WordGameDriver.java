@@ -1,4 +1,4 @@
-package state;
+package state.src.state;
 
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
@@ -66,11 +66,12 @@ public class WordGameDriver {
         try {
             TimeUnit.MILLISECONDS.sleep(time);
         } catch (Exception e) {
-            System.out.println("Timmer error");
+            System.out.println("Timer error");
         }
     }
 
     public static void main(String[] args) {
+        System.out.println(new java.io.File(".").getAbsolutePath());
         WordGameDriver driver = new WordGameDriver();
         driver.run();
     }

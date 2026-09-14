@@ -1,4 +1,4 @@
-package state;
+package state.src.state;
 
 import java.util.HashMap;
 import java.util.Random;
