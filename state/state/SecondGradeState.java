@@ -1,5 +1,4 @@
 package state;
-
 public class SecondGradeState extends State {
 
     public SecondGradeState(VocabularyList vocabularyList) {
