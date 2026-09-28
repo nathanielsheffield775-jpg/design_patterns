@@ -7,12 +7,10 @@ import java.util.ArrayList;
 
 public class FileReader {
     public static final String FILE_NAME = "singleton/txt/words.txt";
-
     /**
-     * Reads in the file and creates a list of anagorams
-     * 
-     * @param Difficulty Easy, Medium, or Hard
-     * @return A list of Anagorams
+     * Returns the words.
+     *
+     * @return list containing words
      */
     public static ArrayList<Word> getWords() {
         ArrayList<Word> words = new ArrayList<Word>();

@@ -8,11 +8,19 @@ public class FlashCards {
     private static FlashCards flashCards;
     private ArrayList<Word> words;
 
+    /**
+     * Constructs a new flash cards instance.
+     */
     private FlashCards() {
         rand = new Random();
         words = FileReader.getWords();
     }
 
+    /**
+     * Returns the instance.
+     *
+     * @return the resulting flash cards
+     */
     public static FlashCards getInstance() {
         if (flashCards == null) {
             flashCards = new FlashCards();
@@ -20,6 +28,11 @@ public class FlashCards {
         return flashCards;
     }
 
+    /**
+     * Returns the word.
+     *
+     * @return the resulting word
+     */
     public Word getWord() {
         if (words.isEmpty()) {
             words = FileReader.getWords();

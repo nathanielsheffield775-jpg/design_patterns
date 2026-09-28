@@ -7,10 +7,16 @@ public class UI {
     private static final String YES = "y";
     private static final String NO = "n";
 
+    /**
+     * Constructs a new ui instance.
+     */
     public UI() {
         reader = new Scanner(System.in);
     }
 
+    /**
+     * Runs the ui.
+     */
     public void run() {
         FlashCards flashCards = FlashCards.getInstance();
         clear();
@@ -33,6 +39,11 @@ public class UI {
         System.out.println("Have a nice day");
     }
 
+    /**
+     * Play agains.
+     *
+     * @return true if successful, false otherwise
+     */
     public boolean playAgain() {
         while (true) {
             System.out.println("Would you like to continue (Y)es or (N)o: ");
@@ -49,11 +60,19 @@ public class UI {
         }
     }
 
+    /**
+     * Clears the ui.
+     */
     public void clear() {
         System.out.print("\033[H\033[2J");
         System.out.flush();
     }
 
+    /**
+     * Mains.
+     *
+     * @param args arguments
+     */
     public static void main(String[] args) {
         UI ui = new UI();
         ui.run();

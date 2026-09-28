@@ -14,18 +14,36 @@ public class Word {
     private static final String RESET = "\u001B[0m";
     private static final int MAX_CONTENT_WIDTH = 60;
 
+    /**
+     * Constructs a new word instance with the specified parameters.
+     *
+     * @param word word
+     * @param type type
+     * @param definition definition
+     * @param sentence sentence
+     */
     public Word(String word, String type, String definition, String sentence) {
         this.word = word;
         this.type = type;
         this.definition = definition;
         this.sentence = sentence;
     }
+    /**
+     * Returns the flash card front.
+     *
+     * @return the resulting string
+     */
     public String getFlashCardFront() {
         List<String> content = new ArrayList<>();
         content.add(word + " (" + type + ")");
         return buildCard(content, BLUE);
     }
 
+    /**
+     * Returns the flash card back.
+     *
+     * @return the resulting string
+     */
     public String getFlashCardBack() {
         List<String> content = new ArrayList<>();
         content.addAll(wrapText("Definition: " + definition, MAX_CONTENT_WIDTH));
@@ -34,6 +52,13 @@ public class Word {
         return buildCard(content, PURPLE);
     }
 
+    /**
+     * Wrap texts.
+     *
+     * @param text text
+     * @param maxWidth max width
+     * @return list containing strings
+     */
     private List<String> wrapText(String text, int maxWidth) {
         List<String> lines = new ArrayList<>();
         String[] words = text.split(" ");
@@ -56,6 +81,13 @@ public class Word {
         return lines;
     }
 
+    /**
+     * Builds the card.
+     *
+     * @param content content
+     * @param textColor text color
+     * @return the resulting string
+     */
     private String buildCard(List<String> content, String textColor) {
         int width = 0;
         for (String line : content) {
